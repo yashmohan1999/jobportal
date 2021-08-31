@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Job Applied Page</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Job Applied Candidate Page</h3>
+    <hr>
+    <div class="card">
+  		<div class="card-body">
+  		<div class="btn-group">
+  <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Large button
+  </button> -->
+   <!-- <div class="dropdown-menu">
+    <a class="dropdown-item" th:each="Jobs: ${theJobs}" 
+    th:value="${Jobs.id}">${Jobs.JobTitle}</a> -->
+	   		<select class="btn btn-primary btn-lg dropdown-toggle" name="jobsItem" >
+	   		<option>-Jobs-</option>
+			 		<option class="dropdown-item"
+			  				th:each="Jobs:${theJobs}"
+			  				th:value="${Jobs.id}"
+			  				th:text="${Jobs.JobTitle}">
+			  		</option>
+			</select>  
+	</div>
+</div>		  		
+		</div>
+	</div>
+</body>
+</html>
